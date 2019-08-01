@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toko Online Tas</title>
+    <style>
+    body{
+        padding: 20px;
+        margin: 20px;
+        background-image: url("assets/img/batik.jpg");
+        flex-direction: column;
+    }
+    h1{
+        margin: 30px;
+        padding: 7px;
+        border: 1px solid black;
+        border-radius: 50px;
+        background-color: palegreen;
+        color: white;
+        border-radius: 20px;
+        animation-name: gantiwarna;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes gantiwarna {
+    0% {background-color: red; left: 0px; top: 0px;}
+    25% {background-color: yellow; left: 200px; top: 0px;}
+    50% {background-color: blue; left: 200px; top: 200px;}
+    75% {background-color: green; left: 0px; top: 200px;}
+    100% {background-color: orangered; left: 0px; top: 0px;}
+    }
+    .item{
+        flex: 1;
+        background: burlywood;
+        margin: 25px;
+        border-radius: 20px;
+        border: 2px solid black;
+        text-align: center;
+        box-shadow: 5px 5px 2px 2px red;
+    }
+    .item .gambar img{
+        width: 170px;
+        height: 130px;
+        margin: 5px;
+        border-radius: 20px;
+        transition: width 1s, height 1s;
+    }
+    .item .gambar img:hover{
+        width: 150px;
+        height: 150px;
+    }
+    #item-list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item:hover{
+        background-color: blue;
+    }
+    #item-list div .nama::before{
+        content: "Merk: "
+    }
+    #item-list div .warna::before{
+        content: "Warna: "
+    }
+    #item-list div .harga::before{
+        content: "Harga: "
+    }
+    </style>
+</head>
+<body>
+    <center><h1>Menjual Berbagai Macam Tas</h1></center>
+    <div id="item-list"></div>
+    
+
+    <script>
+        let item = [
+    {
+        "nama":"Ever Sac",
+        "gambar":"assets/img/ever sac.png",
+        "warna":"black",
+        "harga":"Rp. 180.000"
+    },
+    {
+        "nama":"Eiger",
+        "gambar":"assets/img/Eiger.jpg",
+        "warna":"red",
+        "harga":"Rp. 300.000"
+    },
+    {
+        "nama":"Adidas",
+        "gambar":"assets/img/Adidas.jpg",
+        "warna":"Blue dan Grey",
+        "harga":"Rp. 300.000"
+    },
+    {
+        "nama":"Nike",
+        "gambar":"assets/img/Nike.jpg",
+        "warna":"Grey",
+        "harga":"Rp. 400.000"
+    },
+    {
+        "nama":"Bounjour",
+        "gambar":"assets/img/Bonjour.jpg",
+        "warna":"black",
+        "harga":"Rp. 235.000"
+    },
+    {
+        "nama":"Jansport",
+        "gambar":"assets/img/Jansport.jpg",
+        "warna":"Red",
+        "harga":"Rp. 600.000"
+    },
+    {
+        "nama":"Neosack",
+        "gambar":"assets/img/Neosack.jpg",
+        "warna":"Blue",
+        "harga":"Rp. 300.000"
+    },
+    {
+        "nama":"Polo",
+        "gambar":"assets/img/Polo.jpg",
+        "warna":"Black",
+        "harga":"Rp. 500.000"
+    },
+    {
+        "nama":"Consina",
+        "gambar":"assets/img/Consina pink.jpg",
+        "warna":"Pink",
+        "harga":"Rp. 300.000"
+    },
+    {
+        "nama":"Inficlo",
+        "gambar":"assets/img/Inficlo.jpg",
+        "warna":"yellow",
+        "harga":"Rp. 350.000"
+    },
+    {
+        "nama":"Reebok",
+        "gambar":"assets/img/Reebok.jpg",
+        "warna":"Coklat",
+        "harga":"Rp. 600.000"
+    },
+    {
+        "nama":"Gearbag",
+        "gambar":"assets/img/gearbag.jpeg",
+        "warna":"Grey",
+        "harga":"Rp. 350.000"
+    },
+    {
+        "nama":"Converse",
+        "gambar":"assets/img/Converse.jpg",
+        "warna":"Blue",
+        "harga":"Rp. 400.000"
+    },
+    {
+        "nama":"Kalibre",
+        "gambar":"assets/img/Kalibre.jpg",
+        "warna":"Black",
+        "harga":"Rp. 200.000"
+    },
+    {
+        "nama":"Rei",
+        "gambar":"assets/img/rei.png",
+        "warna":"Blue",
+        "harga":"Rp. 349.000"
+    },
+    {
+        "nama":"Season",
+        "gambar":"assets/img/Season.png",
+        "warna":"Blue",
+        "harga":"Rp. 300.000"
+    },
+    {
+        "nama":"Deuter",
+        "gambar":"assets/img/deuter.jpg",
+        "warna":"Hijau",
+        "harga":"Rp. 450.000"
+    },
+    {
+        "nama":"Puma",
+        "gambar":"assets/img/puma.png",
+        "warna":"Black",
+        "harga":"Rp. 250.000"
+    },
+    {
+        "nama":"Navy",
+        "gambar":"assets/img/navy.jpg",
+        "warna":"Grey",
+        "harga":"Rp. 200.000"
+    },
+    {
+        "nama":"Nama",
+        "gambar":"assets/img/nama.jpg",
+        "warna":"Black",
+        "harga":"Rp. 150.000"
+    },
+        ];
+        for(x in item){
+            let namaItem = item[x].nama;
+            let gambarItem = item[x].gambar;
+            let warnaItem = item[x].warna;
+            let hargaItem = item[x].harga;
+            document.getElementById('item-list').innerHTML+="\
+            <div class='item'>\
+                <div class='gambar'><img src='"+gambarItem+"' alt='' /></div>\
+                <div class='nama'>"+namaItem+"</div>\
+                <div class='warna'>"+warnaItem+"</div>\
+                <div class='harga'>"+hargaItem+"</div>\
+            </div>\
+            ";
+            if(((x+1)/5)===0){
+                document.getElementById('item-list').innerHTML+="\
+                <div class='pemisah'></div>\
+                ";
+            }
+        }
+    </script>
+</body>
+</html>
