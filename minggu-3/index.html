@@ -12,11 +12,11 @@
     <center>
     <div id="kotak">
     <div class="kotak">
-        <h4>Nama: M Azis Saputra</h4>
-        <h4>Kelas: XI RPL 1</h4>
-        <h4>Alamat: Jln Krendang Selatan</h4>
-        <h4>Cita-Cita: org sukses</h4>
-        <h4>Tempat/Tanggal lahir: Jakarta,04 November,2003</h4>
+        <h4 id="nama">Nama</h4>
+        <h4 id="kelas">Kelas</h4>
+        <h4 id="alamat">Alamat</h4>
+        <h4 id="cita">Cita-Cita</h4>
+        <h4 id="tanggal-lahir">Tanggal lahir</h4>
     </div>
     <div class="kotak1">
         <img src="pangrango.jpg" width="150px" height="80px">
@@ -32,7 +32,27 @@
         <p>Saya ank pertama dari 3 bersaudara tinggal sya di Jln Krendang selatan sya sklh di smk jakarta pusat 1 saya kelas xi rpl 1</p>
     </div>
 </center>
-</body>
-</body>
+
+<script>
+    let data = {
+        nama:"Nama : M Azis S",
+        kelas:"Kelas : XI RPL 1",
+        alamat:"Alamat : krendang selatan",
+        cita:"Cita-cita : orang kaya",
+        tanggal:"Tanggal lahir : 4 November 2003"
+    };
+
+    let nama = document.getElementById('nama')
+    let kelas = document.getElementById('kelas')
+    let alamat = document.getElementById('alamat')
+    let cita = document.getElementById('cita')
+    let tanggal = document.getElementById('tanggal-lahir')
+
+    nama.innerHTML = data.nama
+    kelas.innerHTML = data.kelas
+    alamat.innerHTML = data.alamat
+    cita.innerHTML = data.cita
+    tanggal.innerHTML = data.tanggal
+</script>
 </body>
 </html>
