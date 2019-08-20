@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="hitung"></div>
+    <div id="hitung1"></div>
+    <div id="hitung2"></div>
+    <div id="hitung3"></div>
+    <script>
+    class OperasiHitung{
+        pertambahan(a,b){
+            return a+b
+        }
+        perkalian(a,b){
+            return a*b
+        }
+        pembagian(a,b){
+            return a/b 
+        }
+        pengurangan(a,b){
+            return a-b
+        }
+    }
+
+    const OH = new OperasiHitung()
+    document.getElementById('hitung').innerHTML = OH.pertambahan(2,5);
+    document.getElementById('hitung1').innerHTML = OH.pembagian(10,5);
+    document.getElementById('hitung2').innerHTML = OH.perkalian(2,5);
+    document.getElementById('hitung3').innerHTML = OH.pengurangan(2,5);
+    </script>
+</body>
+</html>

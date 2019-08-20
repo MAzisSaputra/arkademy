@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="display"></div>
+    <script>
+        let angka = 100;
+       const tunggu = ()=>{
+           return new Promise((resolve,reject)=>{
+               setTimeout(()=>{
+                   resolve(true)
+               },5000)
+           })
+       }
+       const hitungMundur = async()=>{
+           const penunggu = await tunggu()
+           if(penunggu === true){
+               setInterval(()=>{
+                angka = angka-1
+               document.getElementById('display').innerHTML= angka
+               },1000)            
+           }
+           console.log('finish')
+       }
+       hitungMundur()
+    </script>
+</body>
+</html>
