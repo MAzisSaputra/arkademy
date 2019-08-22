@@ -1,0 +1,20 @@
+body{
+    background: grey;
+    padding: 20px;
+    margin: 20px;
+}
+#display .img{
+    border-radius: 70px;
+    border: 1px solid black;
+}
+#display{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex: column;
+}
+#display .nama{
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: center;
+    margin-bottom: 10px;
+}
